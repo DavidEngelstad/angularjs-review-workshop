@@ -5,7 +5,9 @@ angular.module('todo-list', []).component('app', {
     this.addTodo = e => {
       this.todos.push(this.todo);
       this.todo = '';
-      console.log(this.todos);
+    };
+    this.deleteTodo = index => {
+      this.todos.splice(index, 1);
     };
   },
   template: `
