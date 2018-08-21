@@ -4,9 +4,11 @@ angular.module('todo-list', []).component('app', {
     this.todos = [];
     this.addTodo = e => {
       this.todos.push(this.todo);
+      console.log(this.todos);
     };
   },
   template: `
     Hello from Angular
+    <todo-entry input="$ctrl.todo" submit="$ctrl.addTodo" />
     `
 });
